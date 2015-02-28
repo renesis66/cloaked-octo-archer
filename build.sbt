@@ -6,7 +6,7 @@ version := "3.0.0"
 
 scalaVersion := Version.scala
 
-libraryDependencies ++= Dependencies.scalaTrain
+libraryDependencies ++= Dependencies.scalaTrain :+ "org.scalatest" %% "scalatest" % "2.0.M6-SNAP26" % "test"
 
 scalacOptions ++= List(
   "-unchecked",
