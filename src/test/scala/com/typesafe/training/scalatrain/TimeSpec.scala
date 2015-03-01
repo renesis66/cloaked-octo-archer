@@ -37,4 +37,9 @@ class TimeSpec extends WordSpec with Matchers {
       Time(1, 30) - Time(minutes = 30) shouldEqual 60
     }
   }
+  "calling toString" should {
+    "return formatted time" in {
+      Time(8, 45).toString shouldEqual "08:45"
+    }
+  }
 }

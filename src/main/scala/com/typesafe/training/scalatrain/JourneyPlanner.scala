@@ -9,6 +9,6 @@ class JourneyPlanner(trains: Set[Train]) {
     trains flatMap (train => train.stations)
 
   def trainsAt(station: Station): Set[Train] =
-  // Could also be expressed in short notation: trains filter (_.stations contains station)
+    // Could also be expressed in short notation: trains filter (_.stations contains station)
     trains filter (train => train.stations contains station)
 }
