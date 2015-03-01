@@ -42,4 +42,10 @@ class TimeSpec extends WordSpec with Matchers {
       Time(8, 45).toString shouldEqual "08:45"
     }
   }
+  "Calling Ordered operators" should {
+    "work as expected" in {
+      Time() < Time(1) shouldBe true
+      Time() >= Time(1) shouldBe false
+    }
+  }
 }
