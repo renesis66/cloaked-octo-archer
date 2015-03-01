@@ -1,5 +1,7 @@
 package com.typesafe.training.scalatrain
 
+import com.typesafe.training.scalatrain.TrainInfo.InterCityExpress
+
 /**
  * Created by scottdierbeck on 3/1/15.
  *
@@ -27,15 +29,16 @@ object TestData {
 
   val ice726CologneTime = Time(13, 2)
 
+  val info724: TrainInfo = InterCityExpress(724)
+  val info722: TrainInfo = InterCityExpress(722)
+
   val ice724 = Train(
-    "ICE",
-    724,
+    info724,
     Vector(ice724MunichTime -> munich, ice724NurembergTime -> nuremberg, ice724CologneTime -> cologne)
   )
 
   val ice726 = Train(
-    "ICE",
-    722,
+    info722,
     Vector(ice726MunichTime -> munich, ice726NurembergTime -> nuremberg, ice726CologneTime -> essen)
   )
 
