@@ -14,15 +14,17 @@ class TimeSpec extends WordSpec with Matchers {
       time.minutes shouldEqual 0
       time.asMinutes shouldEqual 0
     }
-    "initialize asMinutes properly" in {
-      val time = Time(hours = 1, minutes = 30)
-      time.asMinutes shouldEqual 90
-    }
     "throw IllegalArgumentException" in {
       evaluating(Time(hours = 24)) should produce[Exception]
       evaluating(Time(hours = -1)) should produce[Exception]
       evaluating(Time(minutes = -1)) should produce[Exception]
       evaluating(Time(minutes = 60)) should produce[Exception]
+    }
+  }
+  "asMinutes" should {
+    "be initialized correctly" in {
+      val time = Time(hours = 1, minutes = 30)
+      time.asMinutes shouldEqual 90
     }
   }
   "Subtracting two Times with minus" should {
